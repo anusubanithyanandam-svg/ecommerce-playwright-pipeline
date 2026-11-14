@@ -17,3 +17,11 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Run Playwright tests
         run: npx playwright test 
+      - name: Upload Scraped CSV & JSON Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: Scraped-ecommerce-data
+          path: |
+               extracted_products.csv
+               extracted_products.json
+      
