@@ -4,5 +4,5 @@ test('Day 2 - valid the Login Test',async({page}) =>{
   await page.locator('#username').fill('tomsmith');
   await page.locator('#password').fill('SuperSecretPassword!');
   await page.locator('button[type="submit"]').click();
-  await expect(page.locator('#flash')).toConatinText('You logged into a secure area!');
+  await expect(page.locator('#flash')).toContainText('You logged into a secure area!');
 });
