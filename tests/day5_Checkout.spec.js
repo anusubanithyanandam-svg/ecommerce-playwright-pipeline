@@ -12,5 +12,5 @@ await page.locator('[data-test="lastName"]').fill('N');
 await page.locator('[data-test="postalCode"]').fill('628501');
 await page.locator('[data-test="continue"]').click();
 await page.locator('[data-test="finish"]').click();
-await expect(page.locator('.complete-header').toContainText('Thank you for your order!'));
+await expect(page.locator('.complete-header')).toContainText('Thank you for your order!');
 });
